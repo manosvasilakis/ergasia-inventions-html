@@ -57,6 +57,6 @@ function slideImgs () {
 }
 
 $(document).ready(function(){
-	setInterval(3000);
-	setInterval(slideImgs, 3000);
+	setInterval(15000);
+	setInterval(slideImgs, 15000);
 });
