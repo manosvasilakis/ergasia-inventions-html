@@ -1,16 +1,18 @@
-/* Manage the arrow so the user can see the direction of the sorting */
+/* Manage the arrow so the user knows:
+ * the direction of the sorting,
+ * the column by which the sorting is happening.
+ */
+function removeIcon() { document.getElementById("sort-direction").remove(); }
+function addIcon(n) {
+	var columns = [ ["year", "Έτος"], ["inve", "Εφεύρεση"], ["invo", "Εφευρέτης/Εταιρεία"] ];
+	document.getElementById(columns[n][0]).innerHTML = columns[n][1] + ' <i id="sort-direction" class="fa fa-caret-up"></i>';
+}
 function toggleIcon() {
 	var icon = document.getElementById("sort-direction");
 	/* Toggle Direction */
 	icon.classList.toggle("fa-caret-up");
 	icon.classList.toggle("fa-caret-down");
 }
-function removeIcon() { document.getElementById("sort-direction").remove(); }
-function addIcon(n) {
-	var columns = [ ["year", "Έτος"], ["inve", "Εφεύρεση"], ["invo", "Εφευρέτης/Εταιρεία"] ];
-	document.getElementById(columns[n][0]).innerHTML = columns[n][1] + ' <i id="sort-direction" class="fa fa-caret-up"></i>';
-}
-
 /* Sort Table by Any Column (W3 Schools Sort Table) */
 function sortTable(n) {
 	var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
