@@ -9,6 +9,4 @@
 # CSS: #
 - Ένα αρχείο CSS για όλες τις σελίδες.
 # Javascript: #
-- Χρήση της βιβλιοθήκης jquery, για λόγους ευκολίας
-	- Αρχείο: ./js/jquery-3.5.1.min.js
 - Αρχείο: ./js/jquery-img_slides.js, χρήση στην αρχική σελίδα (index.html)
